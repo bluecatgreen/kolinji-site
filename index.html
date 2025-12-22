@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolinji Technologies | High-Performance IT Consulting</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0a192f;
+            --secondary: #172a45;
+            --accent: #64ffda;
+            --text-light: #ccd6f6;
+            --text-gray: #8892b0;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary);
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            background: rgba(10, 25, 47, 0.95);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+            border-bottom: 1px solid var(--secondary);
+        }
+
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--accent); text-decoration: none; }
+        .nav-links a { color: var(--text-light); text-decoration: none; margin-left: 2rem; font-size: 0.9rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(10,25,47,0.85), var(--primary)),
+                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            padding: 0 1rem;
+        }
+
+        .hero h1 { font-size: 4rem; margin-bottom: 1rem; color: var(--white); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 5rem 1.5rem; }
+        .section-title { color: var(--white); font-size: 2.2rem; margin-bottom: 3rem; display: flex; align-items: center; }
+        .section-title::after { content: ""; display: block; width: 150px; height: 1px; background: var(--accent); margin-left: 20px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card { background: var(--secondary); padding: 2.5rem; border-radius: 4px; transition: transform 0.3s; border: 1px solid transparent; }
+        .card:hover { transform: translateY(-10px); border-color: var(--accent); }
+        .card i { color: var(--accent); font-size: 2rem; margin-bottom: 1rem; }
+
+        /* Neuro-Symbolic Highlight */
+        .special-focus {
+            background: rgba(100, 255, 218, 0.05);
+            padding: 3rem;
+            border-radius: 8px;
+            margin: 4rem 0;
+            border-left: 4px solid var(--accent);
+        }
+
+        .contact-form { background: var(--secondary); padding: 3rem; border-radius: 4px; }
+        input, select, textarea { width: 100%; padding: 15px; background: var(--primary); border: 1px solid var(--text-gray); color: var(--white); margin-bottom: 1rem; border-radius: 4px; box-sizing: border-box; }
+        .btn { background: transparent; color: var(--accent); border: 1px solid var(--accent); padding: 1rem 2rem; font-weight: bold; cursor: pointer; transition: 0.3s; width: 100%; }
+        .btn:hover { background: rgba(100, 255, 218, 0.1); }
+
+        footer { text-align: center; padding: 4rem; color: var(--text-gray); font-size: 0.9rem; border-top: 1px solid var(--secondary); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">KOLINJI</a>
+        <div class="nav-links">
+            <a href="#about">The Founder</a>
+            <a href="#specialty">AI Specialty</a>
+            <a href="#services">Full Suite</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>IT Transformation & Scalability</h1>
+        <p>Specialized consulting for Telecom-grade systems and modern AI architectures.</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2 class="section-title">Decades of Expertise</h2>
+            <p>Kolinji Technologies was founded by <strong>Raman Jankiram</strong>, bringing 30 years of deep experience in software development within the Telecom industry[cite: 3, 4, 5]. We specialize in complex IT Systems including Service Delivery, Network/Service Assurance, and 4G/5G Network Performance Management[cite: 6].</p>
+        </section>
+
+        <section id="specialty" class="special-focus">
+            <h3>Focus Area: Neuro-Symbolic AI</h3>
+            <p>While many firms focus solely on standard Generative AI [cite: 8], we specialize in <strong>Neuro-Symbolic AI</strong>. This approach combines the learning speed of neural networks with the rigorous, deterministic logic required for secure enterprise environments[cite: 10, 11].</p>
+            
+        </section>
+
+        <section id="services">
+            <h2 class="section-title">Consulting Services</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Artificial Intelligence</h3>
+                    <ul>
+                        <li>Generative & Agentic AI [cite: 8, 9]</li>
+                        <li>Deterministic & Traditional AI/ML [cite: 10, 12]</li>
+                        <li>Neuro Symbolic AI Integration </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Modernization</h3>
+                    <ul>
+                        <li>System Modernization [cite: 13]</li>
+                        <li>High-Scale API Design [cite: 15]</li>
+                        <li>Advanced Data Layer Solutions </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <i class="fas fa-server"></i>
+                    <h3>Infrastructure</h3>
+                    <ul>
+                        <li>System Scalability [cite: 14]</li>
+                        <li>Monitoring & Observability </li>
+                        <li>Disaster Recovery Assessments [cite: 19]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" style="margin-top: 5rem;">
+            <h2 class="section-title">Schedule a Consultation</h2>
+            <div class="contact-form">
+                <form>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Work Email" required>
+                    <select required>
+                        <option value="" disabled selected>Area of Concern</option>
+                        <option>AI Transformation</option>
+                        <option>Telecom/5G Performance</option>
+                        <option>System Scalability</option>
+                        <option>Disaster Recovery</option>
+                    </select>
+                    <textarea placeholder="Tell us about your existing IT systems..." rows="4" required></textarea>
+                    <button type="submit" class="btn">REQUEST DISCOVERY CALL</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Kolinji Technologies. Transforming existing IT into modern, compliant architecture[cite: 2].</p>
+    </footer>
+
+</body>
+</html>
