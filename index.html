@@ -15,8 +15,10 @@
             --white: #ffffff;
         }
 
+        * { box-sizing: border-box; }
+
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, sans-serif;
             background-color: var(--primary);
             color: var(--text-light);
             margin: 0;
@@ -24,26 +26,27 @@
             scroll-behavior: smooth;
         }
 
+        /* Responsive Nav */
         nav {
-            background: rgba(10, 25, 47, 0.95);
-            padding: 1.5rem 2rem;
+            background: rgba(10, 25, 47, 0.98);
+            padding: 1rem;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-sizing: border-box;
             border-bottom: 1px solid var(--secondary);
         }
 
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--accent); text-decoration: none; }
-        .nav-links a { color: var(--text-light); text-decoration: none; margin-left: 2rem; font-size: 0.9rem; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--accent); }
+        .logo { font-size: 1.2rem; font-weight: bold; color: var(--accent); text-decoration: none; margin-bottom: 0.5rem; }
+        .nav-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .nav-links a { color: var(--text-light); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; }
 
+        /* Hero */
         .hero {
-            height: 90vh;
+            min-height: 70vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -52,34 +55,56 @@
             background: linear-gradient(to bottom, rgba(10,25,47,0.85), var(--primary)),
                         url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
-            padding: 0 1rem;
+            padding: 100px 1.5rem 2rem;
         }
 
-        .hero h1 { font-size: 4rem; margin-bottom: 1rem; color: var(--white); }
-        .container { max-width: 1100px; margin: 0 auto; padding: 5rem 1.5rem; }
-        .section-title { color: var(--white); font-size: 2.2rem; margin-bottom: 3rem; display: flex; align-items: center; }
-        .section-title::after { content: ""; display: block; width: 150px; height: 1px; background: var(--accent); margin-left: 20px; }
+        .hero h1 { font-size: 2.2rem; color: var(--white); margin-bottom: 1rem; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; }
+        
+        .section-title { color: var(--white); font-size: 1.8rem; margin-bottom: 2rem; border-bottom: 1px solid var(--accent); padding-bottom: 0.5rem; }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .card { background: var(--secondary); padding: 2.5rem; border-radius: 4px; transition: transform 0.3s; border: 1px solid transparent; }
-        .card:hover { transform: translateY(-10px); border-color: var(--accent); }
-        .card i { color: var(--accent); font-size: 2rem; margin-bottom: 1rem; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+        .card { background: var(--secondary); padding: 2rem; border-radius: 8px; border: 1px solid rgba(100, 255, 218, 0.1); }
+        .card i { color: var(--accent); font-size: 1.8rem; margin-bottom: 1rem; }
 
-        /* Neuro-Symbolic Highlight */
-        .special-focus {
-            background: rgba(100, 255, 218, 0.05);
-            padding: 3rem;
-            border-radius: 8px;
-            margin: 4rem 0;
-            border-left: 4px solid var(--accent);
+        /* Special Focus */
+        .special-focus { background: rgba(100, 255, 218, 0.05); padding: 2rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid var(--accent); }
+
+        /* Contact Form */
+        .contact-form { background: var(--secondary); padding: 1.5rem; border-radius: 8px; }
+        input, select, textarea { width: 100%; padding: 15px; background: var(--primary); border: 1px solid var(--text-gray); color: var(--white); margin-bottom: 1rem; border-radius: 4px; font-size: 16px; }
+        .btn { background: var(--accent); color: var(--primary); border: none; padding: 1rem; font-weight: bold; cursor: pointer; width: 100%; border-radius: 4px; }
+
+        /* Back to Top Button */
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--accent);
+            color: var(--primary);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: none; /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1001;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            border: none;
+            font-size: 1.2rem;
         }
 
-        .contact-form { background: var(--secondary); padding: 3rem; border-radius: 4px; }
-        input, select, textarea { width: 100%; padding: 15px; background: var(--primary); border: 1px solid var(--text-gray); color: var(--white); margin-bottom: 1rem; border-radius: 4px; box-sizing: border-box; }
-        .btn { background: transparent; color: var(--accent); border: 1px solid var(--accent); padding: 1rem 2rem; font-weight: bold; cursor: pointer; transition: 0.3s; width: 100%; }
-        .btn:hover { background: rgba(100, 255, 218, 0.1); }
+        footer { text-align: center; padding: 3rem 1.5rem; color: var(--text-gray); }
 
-        footer { text-align: center; padding: 4rem; color: var(--text-gray); font-size: 0.9rem; border-top: 1px solid var(--secondary); }
+        @media (min-width: 768px) {
+            nav { flex-direction: row; padding: 1.5rem 4rem; justify-content: space-between; }
+            .logo { margin-bottom: 0; font-size: 1.5rem; }
+            .hero h1 { font-size: 3.5rem; }
+            .grid { grid-template-columns: repeat(3, 1fr); }
+            .section-title { font-size: 2.2rem; display: flex; border-bottom: none; }
+            .section-title::after { content: ""; display: block; width: 150px; height: 1px; background: var(--accent); margin-left: 20px; }
+        }
     </style>
 </head>
 <body>
@@ -87,87 +112,93 @@
     <nav>
         <a href="#" class="logo">KOLINJI</a>
         <div class="nav-links">
-            <a href="#about">The Founder</a>
-            <a href="#specialty">AI Specialty</a>
-            <a href="#services">Full Suite</a>
+            <a href="#about">Expertise</a>
+            <a href="#specialty">AI Focus</a>
+            <a href="#services">Services</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <header class="hero">
         <h1>IT Transformation & Scalability</h1>
-        <p>Specialized consulting for Telecom-grade systems and modern AI architectures.</p>
+        <p>Architecting compliant, modern, and efficient IT systems.</p>
     </header>
 
     <div class="container">
-        
         <section id="about">
-            <h2 class="section-title">Decades of Expertise</h2>
-            <p>Kolinji Technologies was founded by <strong>Raman Jankiram</strong>, bringing 30 years of deep experience in software development within the Telecom industry. We specialize in complex IT Systems including Service Delivery, Network/Service Assurance, and 4G/5G Network Performance Management.</p>
+            <h2 class="section-title">Founded by Raman Jankiram</h2>
+            <p>Raman Jankiram brings 30 years of extensive experience across various software development roles within the Telecom industry.</p>
+            <p>Our firm specializes in the technical architecture of complex IT Systems, focusing on Service Delivery, Network/Service Assurance, and the performance management of 4G and 5G networks.</p>
         </section>
 
         <section id="specialty" class="special-focus">
-            <h3>Focus Area: Neuro-Symbolic AI</h3>
-            <p>While many firms focus solely on standard Generative AI, we specialize in <strong>Neuro-Symbolic AI</strong>. This approach combines the learning speed of neural networks with the rigorous, deterministic logic required for secure enterprise environments.</p>
+            <h3>Pioneering Neuro-Symbolic AI</h3>
+            <p>Kolinji Technologies bridges the gap between neural learning and deterministic logic through <strong>Neuro-Symbolic AI</strong>.</p>
             
         </section>
 
         <section id="services">
-            <h2 class="section-title">Consulting Services</h2>
+            <h2 class="section-title">Core Services</h2>
             <div class="grid">
                 <div class="card">
-                    <i class="fas fa-brain"></i>
-                    <h3>Artificial Intelligence</h3>
+                    <i class="fas fa-microchip"></i>
+                    <h3>AI Solutions</h3>
                     <ul>
                         <li>Generative & Agentic AI</li>
-                        <li>Deterministic & Traditional AI/ML</li>
-                        <li>Neuro Symbolic AI Integration </li>
+                        <li>Neuro Symbolic AI </li>
+                        <li>Traditional AI/ML </li>
                     </ul>
                 </div>
                 <div class="card">
-                    <i class="fas fa-layer-group"></i>
+                    <i class="fas fa-code-branch"></i>
                     <h3>Modernization</h3>
                     <ul>
-                        <li>System Modernization</li>
-                        <li>High-Scale API Design</li>
-                        <li>Advanced Data Layer Solutions</li>
+                        <li>System Modernization </li>
+                        <li>Scalability & API Design </li>
+                        <li>Data Layer Solutions </li>
                     </ul>
                 </div>
                 <div class="card">
-                    <i class="fas fa-server"></i>
+                    <i class="fas fa-shield-alt"></i>
                     <h3>Infrastructure</h3>
                     <ul>
-                        <li>System Scalability</li>
-                        <li>Monitoring & Observability </li>
-                        <li>Disaster Recovery Assessments</li>
+                        <li>Observability Enablement</li>
+                        <li>Disaster Recovery </li>
+                        <li>Infrastructure Enhancements</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section id="contact" style="margin-top: 5rem;">
-            <h2 class="section-title">Schedule a Consultation</h2>
+        <section id="contact">
+            <h2 class="section-title">Initiate Transformation</h2>
             <div class="contact-form">
                 <form>
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="email" placeholder="Work Email" required>
-                    <select required>
-                        <option value="" disabled selected>Area of Concern</option>
-                        <option>AI Transformation</option>
-                        <option>Telecom/5G Performance</option>
-                        <option>System Scalability</option>
-                        <option>Disaster Recovery</option>
-                    </select>
-                    <textarea placeholder="Tell us about your existing IT systems..." rows="4" required></textarea>
-                    <button type="submit" class="btn">REQUEST DISCOVERY CALL</button>
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Describe your IT transformation goals..." rows="4" required></textarea>
+                    <button type="submit" class="btn">REQUEST CONSULTATION</button>
                 </form>
             </div>
         </section>
     </div>
 
+    <button id="backToTop" onclick="window.scrollTo(0,0)"><i class="fas fa-arrow-up"></i></button>
+
     <footer>
-        <p>&copy; 2025 Kolinji Technologies. Transforming existing IT into modern, compliant architecture.</p>
+        <p>&copy; 2025 Kolinji Technologies. Transforming and augmenting IT for a scalable future.</p>
     </footer>
+
+    <script>
+        const btn = document.getElementById('backToTop');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "flex";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    </script>
 
 </body>
 </html>
