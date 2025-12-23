@@ -221,10 +221,12 @@
         <section id="contact">
             <h2 class="section-title">Contact Us</h2>
             <div class="contact-form">
-                <form>
+                <form action="https://api.staticforms.dev/submit" method="POST">
                     <input type="text" placeholder="Full Name" required>
                     <input type="text" placeholder="Organization Name" required>
                     <input type="email" placeholder="Work Email" required>
+                    <input name="apiKey" value="sf_d8gi82dj5b808jdncb43bfl7" hidden>
+                    
                     <select required>
                         <option value="" disabled selected>Primary Area of Interest</option>
                         <option>Artificial Intelligence (Agentic/Neuro-Symbolic)</option>
@@ -232,7 +234,7 @@
                         <option>Training & Social Responsibility</option>
                         <option>Infrastructure & Compliance</option>
                     </select>
-                    <textarea placeholder="How can Raman Jankiram and our team help modernize your environment?" rows="5" required></textarea>
+                    <textarea placeholder="How can we team help modernize your environment?" rows="5" required></textarea>
                     <button type="submit" class="btn">SUBMIT INQUIRY</button>
                 </form>
             </div>
