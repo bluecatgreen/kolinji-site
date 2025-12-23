@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kolinji Technologies | High-Performance IT Consulting</title>
+    <title>Kolinji Technologies | IT Transformation & AI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -26,9 +26,8 @@
             scroll-behavior: smooth;
         }
 
-        /* Responsive Nav */
         nav {
-            background: rgba(10, 25, 47, 0.98);
+            background: rgba(10, 25, 47, 0.95);
             padding: 1rem;
             display: flex;
             flex-direction: column;
@@ -42,151 +41,210 @@
 
         .logo { font-size: 1.2rem; font-weight: bold; color: var(--accent); text-decoration: none; margin-bottom: 0.5rem; }
         .nav-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-        .nav-links a { color: var(--text-light); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; }
+        .nav-links a { color: var(--text-light); text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* Hero */
         .hero {
-            min-height: 70vh;
+            min-height: 60vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(to bottom, rgba(10,25,47,0.85), var(--primary)),
-                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80');
+            background: linear-gradient(to bottom, rgba(10,25,47,0.8), var(--primary)),
+                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
-            padding: 100px 1.5rem 2rem;
+            padding: 120px 1.5rem 2rem;
         }
 
-        .hero h1 { font-size: 2.2rem; color: var(--white); margin-bottom: 1rem; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; }
+        .hero h1 { font-size: 2.5rem; color: var(--white); margin-bottom: 1rem; }
+        .hero p { font-size: 1.1rem; color: var(--accent); font-weight: bold; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 4rem 1.5rem; }
         
-        .section-title { color: var(--white); font-size: 1.8rem; margin-bottom: 2rem; border-bottom: 1px solid var(--accent); padding-bottom: 0.5rem; }
+        .section-title { color: var(--white); font-size: 2rem; margin-bottom: 2rem; border-bottom: 1px solid var(--accent); padding-bottom: 0.5rem; width: fit-content; }
 
-        .grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
-        .card { background: var(--secondary); padding: 2rem; border-radius: 8px; border: 1px solid rgba(100, 255, 218, 0.1); }
-        .card i { color: var(--accent); font-size: 1.8rem; margin-bottom: 1rem; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+        
+        .card { background: var(--secondary); padding: 2rem; border-radius: 8px; border: 1px solid rgba(100, 255, 218, 0.1); transition: 0.3s; }
+        .card:hover { border-color: var(--accent); transform: translateY(-5px); }
+        .card i { color: var(--accent); font-size: 2rem; margin-bottom: 1rem; }
+        .card h3 { color: var(--white); margin-top: 0; }
+        .card ul { padding-left: 1.2rem; color: var(--text-gray); }
 
-        /* Special Focus */
-        .special-focus { background: rgba(100, 255, 218, 0.05); padding: 2rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid var(--accent); }
+        .about-box { background: rgba(100, 255, 218, 0.05); padding: 2rem; border-radius: 8px; margin-bottom: 4rem; }
+        
+        table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: var(--secondary); }
+        th, td { text-align: left; padding: 15px; border: 1px solid var(--primary); }
+        th { background: rgba(100, 255, 218, 0.1); color: var(--accent); }
 
-        /* Contact Form */
-        .contact-form { background: var(--secondary); padding: 1.5rem; border-radius: 8px; }
+        .contact-form { background: var(--secondary); padding: 2rem; border-radius: 8px; margin-top: 3rem; }
         input, select, textarea { width: 100%; padding: 15px; background: var(--primary); border: 1px solid var(--text-gray); color: var(--white); margin-bottom: 1rem; border-radius: 4px; font-size: 16px; }
-        .btn { background: var(--accent); color: var(--primary); border: none; padding: 1rem; font-weight: bold; cursor: pointer; width: 100%; border-radius: 4px; }
+        .btn { background: var(--accent); color: var(--primary); border: none; padding: 1rem; font-weight: bold; cursor: pointer; width: 100%; border-radius: 4px; font-size: 1rem; transition: 0.3s; }
+        .btn:hover { background: var(--white); }
 
-        /* Back to Top Button */
-        #backToTop {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: var(--accent);
-            color: var(--primary);
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: none; /* Hidden by default */
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            z-index: 1001;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            border: none;
-            font-size: 1.2rem;
-        }
+        #backToTop { position: fixed; bottom: 20px; right: 20px; background: var(--accent); color: var(--primary); width: 45px; height: 45px; border-radius: 50%; display: none; justify-content: center; align-items: center; cursor: pointer; z-index: 1001; border: none; }
 
-        footer { text-align: center; padding: 3rem 1.5rem; color: var(--text-gray); }
+        footer { text-align: center; padding: 3rem; color: var(--text-gray); border-top: 1px solid var(--secondary); }
 
         @media (min-width: 768px) {
             nav { flex-direction: row; padding: 1.5rem 4rem; justify-content: space-between; }
             .logo { margin-bottom: 0; font-size: 1.5rem; }
             .hero h1 { font-size: 3.5rem; }
-            .grid { grid-template-columns: repeat(3, 1fr); }
-            .section-title { font-size: 2.2rem; display: flex; border-bottom: none; }
-            .section-title::after { content: ""; display: block; width: 150px; height: 1px; background: var(--accent); margin-left: 20px; }
+            .grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#" class="logo">KOLINJI</a>
+        <a href="#" class="logo">KOLINJI TECHNOLOGIES</a>
         <div class="nav-links">
-            <a href="#about">Expertise</a>
-            <a href="#specialty">AI Focus</a>
-            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#ai">AI Services</a>
+            <a href="#core">Engineering</a>
+            <a href="#training">Training</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <header class="hero">
-        <h1>IT Transformation & Scalability</h1>
-        <p>Architecting compliant, modern, and efficient IT systems.</p>
+        <h1>Transform. Augment. Scale.</h1>
+        <p>Architecting the Future of IT</p>
     </header>
 
     <div class="container">
-        <section id="about">
-            <h2 class="section-title">Founded by Raman Jankiram</h2>
-            <p>Raman Jankiram brings 30 years of extensive experience across various software development roles within the Telecom industry.</p>
-            <p>Our firm specializes in the technical architecture of complex IT Systems, focusing on Service Delivery, Network/Service Assurance, and the performance management of 4G and 5G networks.</p>
+        
+        <section id="about" class="about-box">
+            <h2 class="section-title">About Us</h2>
+            <p>Kolinji Technologies is a premier technology consulting and services firm dedicated to driving digital transformation[cite: 2]. Founded by <strong>Raman Jankiram</strong>, our leadership brings over 30 years of specialized software development experience within the Telecom sector[cite: 4, 5].</p>
+            <p>With a profound technical background in complex IT systems—specifically in Service Delivery, Network Assurance, and 4G/5G Performance Management—we bridge the gap between traditional operations and next-generation innovation[cite: 6].</p>
         </section>
 
-        <section id="specialty" class="special-focus">
-            <h3>Pioneering Neuro-Symbolic AI</h3>
-            <p>Kolinji Technologies bridges the gap between neural learning and deterministic logic through <strong>Neuro-Symbolic AI</strong>.</p>
-            
-        </section>
-
-        <section id="services">
-            <h2 class="section-title">Core Services</h2>
+        <section id="ai">
+            <h2 class="section-title">Our Specialized AI Services</h2>
+            <p>We don't just implement AI; we integrate intelligence that fits your specific business logic.</p>
             <div class="grid">
                 <div class="card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Generative & Agentic</h3>
+                    <ul>
+                        <li>Generative AI Deployment [cite: 8]</li>
+                        <li>Agentic AI Workflows [cite: 9]</li>
+                        <li>Operationalizing Guardrails [cite: 22]</li>
+                    </ul>
+                </div>
+                <div class="card">
                     <i class="fas fa-microchip"></i>
-                    <h3>AI Solutions</h3>
+                    <h3>Advanced Intelligence</h3>
                     <ul>
-                        <li>Generative & Agentic AI</li>
-                        <li>Neuro Symbolic AI </li>
-                        <li>Traditional AI/ML </li>
+                        <li>Neuro-Symbolic AI [cite: 11]</li>
+                        <li>Deterministic AI Systems [cite: 10]</li>
+                        <li>Traditional AI/ML Models [cite: 12]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="core" style="margin-top: 4rem;">
+            <h2 class="section-title">Core Engineering & Infrastructure</h2>
+            <p>Beyond AI, we provide the foundational engineering required for modern enterprise resilience.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service Category</th>
+                        <th>Our Solutions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>System Evolution</td>
+                        <td>Modernizing legacy architecture and ensuring seamless system scalability[cite: 13, 14].</td>
+                    </tr>
+                    <tr>
+                        <td>Architecture & Data</td>
+                        <td>High-performance API design and robust Data Layer solutions[cite: 15, 16].</td>
+                    </tr>
+                    <tr>
+                        <td>Operational Health</td>
+                        <td>Implementing advanced Monitoring and Observability tools[cite: 18].</td>
+                    </tr>
+                    <tr>
+                        <td>Business Resilience</td>
+                        <td>Disaster Recovery and Business Continuity assessments[cite: 19].</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="training">
+            <h2 class="section-title">Training & Mentorship</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Workforce Development</h3>
+                    <ul>
+                        <li>Telecom OSS & Network Tech [cite: 21, 23]</li>
+                        <li>Network Performance Management [cite: 24]</li>
+                        <li>AI Guardrails Training [cite: 22]</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <i class="fas fa-code-branch"></i>
-                    <h3>Modernization</h3>
+                    <i class="fas fa-users"></i>
+                    <h3>Social Responsibility</h3>
                     <ul>
-                        <li>System Modernization </li>
-                        <li>Scalability & API Design </li>
-                        <li>Data Layer Solutions </li>
+                        <li>Mentoring College Graduates [cite: 26]</li>
+                        <li>Softskill Development [cite: 27]</li>
+                        <li>Corporate Navigation Coaching [cite: 28]</li>
                     </ul>
                 </div>
+            </div>
+        </section>
+
+        <section id="why" style="margin-top: 4rem;">
+            <h2 class="section-title">Why Partner With Us?</h2>
+            <div class="grid">
                 <div class="card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Infrastructure</h3>
-                    <ul>
-                        <li>Observability Enablement</li>
-                        <li>Disaster Recovery </li>
-                        <li>Infrastructure Enhancements</li>
-                    </ul>
+                    <h3>Deep Domain Expertise</h3>
+                    <p>Decades of experience in high-stakes Telecom environments and complex software roles[cite: 5, 6].</p>
+                </div>
+                <div class="card">
+                    <h3>Future-Ready Architectures</h3>
+                    <p>We focus on making systems efficient, modern, and compliant with current standards[cite: 2].</p>
+                </div>
+                <div class="card">
+                    <h3>End-to-End Consulting</h3>
+                    <p>From initial assessment to full-scale technical implementation and infrastructure enhancement[cite: 7, 17].</p>
                 </div>
             </div>
         </section>
 
         <section id="contact">
-            <h2 class="section-title">Initiate Transformation</h2>
+            <h2 class="section-title">Contact Us</h2>
             <div class="contact-form">
                 <form>
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Describe your IT transformation goals..." rows="4" required></textarea>
-                    <button type="submit" class="btn">REQUEST CONSULTATION</button>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" placeholder="Organization Name" required>
+                    <input type="email" placeholder="Work Email" required>
+                    <select required>
+                        <option value="" disabled selected>Primary Area of Interest</option>
+                        <option>Artificial Intelligence (Agentic/Neuro-Symbolic)</option>
+                        <option>System Modernization & Scalability</option>
+                        <option>Training & Social Responsibility</option>
+                        <option>Infrastructure & Compliance</option>
+                    </select>
+                    <textarea placeholder="How can Raman Jankiram and our team help modernize your environment?" rows="5" required></textarea>
+                    <button type="submit" class="btn">SUBMIT INQUIRY</button>
                 </form>
             </div>
         </section>
+
     </div>
 
     <button id="backToTop" onclick="window.scrollTo(0,0)"><i class="fas fa-arrow-up"></i></button>
 
     <footer>
-        <p>&copy; 2025 Kolinji Technologies. Transforming and augmenting IT for a scalable future.</p>
+        <p>&copy; 2025 Kolinji Technologies. All rights reserved.</p>
+        <p>Specialists in Telecom-grade Software & 5G Performance Management[cite: 6].</p>
     </footer>
 
     <script>
@@ -199,6 +257,5 @@
             }
         };
     </script>
-
 </body>
 </html>
