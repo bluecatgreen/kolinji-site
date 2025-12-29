@@ -82,6 +82,9 @@
         .btn { background: var(--accent); color: var(--primary); border: none; padding: 1rem; font-weight: bold; cursor: pointer; width: 100%; border-radius: 4px; font-size: 1rem; transition: 0.3s; }
         .btn:hover { background: var(--white); }
 
+        .location-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; text-align: center; margin-top: 1rem; }
+        .location-item { background: rgba(100, 255, 218, 0.1); padding: 1rem; border-radius: 4px; border: 1px solid var(--accent); }
+
         #backToTop { position: fixed; bottom: 20px; right: 20px; background: var(--accent); color: var(--primary); width: 45px; height: 45px; border-radius: 50%; display: none; justify-content: center; align-items: center; cursor: pointer; z-index: 1001; border: none; }
 
         footer { text-align: center; padding: 3rem; color: var(--text-gray); border-top: 1px solid var(--secondary); }
@@ -109,133 +112,120 @@
 
     <header class="hero">
         <h1>Transform. Augment. Scale.</h1>
-        <p>Architecting the Future of IT</p>
+        <p>Architecting the Future of IT </p>
     </header>
 
     <div class="container">
         
         <section id="about" class="about-box">
             <h2 class="section-title">About Us</h2>
-            <p>Kolinji Technologies is a premier technology consulting and services firm dedicated to driving digital transformation. Founded by <strong>Raman Jankiram</strong>, our leadership brings over 30 years of specialized software development experience within the Telecom sector.</p>
-            <p>With a profound technical background in complex IT systems—specifically in Service Delivery, Network Assurance, and 4G/5G Performance Management—we bridge the gap between traditional operations and next-generation innovation.</p>
+            <p>Kolinji Technologies is a technology consulting and services company offering a wide range of IT solutions to organizations to transform and augment their existing IT systems to a more efficient, modern, compliant and scalable architecture.</p>
+            <p>Started by <strong>Raman Jankiram</strong>, who brings 30 years of experience in various software development roles in the Telecom industry[cite: 4, 5]. Our leadership possesses vast technical experience in complex IT Systems, particularly in the areas of Service Delivery, Network/Service Assurance, and 4G and 5G Network Performance Management[cite: 6].</p>
         </section>
 
         <section id="ai">
-            <h2 class="section-title">Our Specialized AI Services</h2>
-            <p>We don't just implement AI; we integrate intelligence that fits your specific business logic.</p>
+            <h2 class="section-title">Consulting & Solution Services [cite: 7]</h2>
             <div class="grid">
                 <div class="card">
-                    <i class="fas fa-robot"></i>
-                    <h3>Generative & Agentic</h3>
+                    <i class="fas fa-brain"></i>
+                    <h3>Artificial Intelligence</h3>
                     <ul>
-                        <li>Generative AI Deployment</li>
-                        <li>Agentic AI Workflows</li>
-                        <li>Operationalizing Guardrails</li>
+                        <li>Generative AI [cite: 8]</li>
+                        <li>Agentic AI [cite: 9]</li>
+                        <li>Deterministic AI [cite: 10]</li>
+                        <li>Neuro Symbolic AI [cite: 11]</li>
+                        <li>Traditional AI/ML [cite: 12]</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <i class="fas fa-microchip"></i>
-                    <h3>Advanced Intelligence</h3>
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Infrastructure & Design</h3>
                     <ul>
-                        <li>Neuro-Symbolic AI</li>
-                        <li>Deterministic AI Systems</li>
-                        <li>Traditional AI/ML Models</li>
+                        <li>API Design [cite: 15]</li>
+                        <li>Data Layer solutions [cite: 16]</li>
+                        <li>Infrastructure enhancements [cite: 17]</li>
+                        <li>Monitoring and Observability Enablement [cite: 18]</li>
+                        <li>Disaster Recovery and Business Continuity Assessment [cite: 19]</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="core" style="margin-top: 4rem;">
-            <h2 class="section-title">Core Engineering & Infrastructure</h2>
-            <p>Beyond AI, we provide the foundational engineering required for modern enterprise resilience.</p>
+            <h2 class="section-title">Core Engineering</h2>
             <table>
                 <thead>
                     <tr>
                         <th>Service Category</th>
-                        <th>Our Solutions</th>
+                        <th>Our Focus</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>System Evolution</td>
-                        <td>Modernizing legacy architecture and ensuring seamless system scalability.</td>
+                        <td>System Modernization</td>
+                        <td>Transforming legacy systems into modern, efficient, and compliant architectures[cite: 2, 13].</td>
                     </tr>
                     <tr>
-                        <td>Architecture & Data</td>
-                        <td>High-performance API design and robust Data Layer solutions.</td>
+                        <td>Scalability</td>
+                        <td>Augmenting existing systems to ensure scalable performance[cite: 2, 14].</td>
                     </tr>
                     <tr>
-                        <td>Operational Health</td>
-                        <td>Implementing advanced Monitoring and Observability tools.</td>
-                    </tr>
-                    <tr>
-                        <td>Business Resilience</td>
-                        <td>Disaster Recovery and Business Continuity assessments.</td>
+                        <td>Telecom Specialized</td>
+                        <td>Autonomous Network Assessment and Evaluation for Service Providers[cite: 20].</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
         <section id="training">
-            <h2 class="section-title">Training & Mentorship</h2>
+            <h2 class="section-title">Specialized Programs </h2>
             <div class="grid">
                 <div class="card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>Workforce Development</h3>
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Training Services [cite: 21]</h3>
                     <ul>
-                        <li>Telecom OSS & Network Tech</li>
-                        <li>Network Performance Management</li>
-                        <li>AI Guardrails Training</li>
+                        <li>Telecom OSS [cite: 22]</li>
+                        <li>Operationalizing GenAI, Agentic AI, and Guardrails [cite: 23]</li>
+                        <li>Network Technologies (5G, 4G, MPLS, SD-WAN, Datacenter Interconnect) [cite: 24]</li>
+                        <li>Network Performance Management [cite: 25]</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <i class="fas fa-users"></i>
-                    <h3>Social Responsibility</h3>
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Social Responsibility [cite: 26]</h3>
                     <ul>
-                        <li>Mentoring College Graduates</li>
-                        <li>Softskill Development</li>
-                        <li>Corporate Navigation Coaching</li>
+                        <li>Mentoring College graduates [cite: 27]</li>
+                        <li>Softskill development [cite: 28]</li>
+                        <li>Navigating the Corporate environment [cite: 29]</li>
                     </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="why" style="margin-top: 4rem;">
-            <h2 class="section-title">Why Partner With Us?</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Deep Domain Expertise</h3>
-                    <p>Decades of experience in high-stakes Telecom environments and complex software roles.</p>
-                </div>
-                <div class="card">
-                    <h3>Future-Ready Architectures</h3>
-                    <p>We focus on making systems efficient, modern, and compliant with current standards.</p>
-                </div>
-                <div class="card">
-                    <h3>End-to-End Consulting</h3>
-                    <p>From initial assessment to full-scale technical implementation and infrastructure enhancement.</p>
                 </div>
             </div>
         </section>
 
         <section id="contact">
-            <h2 class="section-title">Contact Us</h2>
+            <h2 class="section-title">Contact Our Offices [cite: 30]</h2>
+            <div class="location-grid">
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Chennai, Tamil Nadu, India [cite: 31]</p>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Baltimore, Maryland, USA [cite: 32]</p>
+                </div>
+            </div>
             <div class="contact-form">
-                <form action="https://api.staticforms.dev/submit" method="POST">
-                    <input name="fname" type="text" placeholder="Full Name" required>
-                    <input name="orgname" type="text" placeholder="Organization Name" required>
-                    <input name="eemail" type="email" placeholder="Work Email" required>
-                    <input name="apiKey" value="sf_d8gi82dj5b808jdncb43bfl7" type="hidden">
-                    <input type="hidden" name="redirectTo" value="https://bluecatgreen.github.io/kolinji-site/" />
-                    
-                    <select name="aos" required>
-                        <option value="" disabled selected>Primary Area of Interest</option>
-                        <option>Artificial Intelligence (Agentic/Neuro-Symbolic)</option>
+                <form>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Work Email" required>
+                    <select required>
+                        <option value="" disabled selected>Area of Interest</option>
+                        <option>AI Consulting (Agentic/Deterministic/Neuro Symbolic)</option>
+                        <option>Infrastructure & API Design</option>
+                        <option>Telecom Training & OSS</option>
                         <option>System Modernization & Scalability</option>
-                        <option>Training & Social Responsibility</option>
-                        <option>Infrastructure & Compliance</option>
                     </select>
-                    <textarea name="minfo" placeholder="How can we help modernize your environment?" rows="5" required></textarea>
+                    <textarea placeholder="Message for Raman Jankiram and the team" rows="5" required></textarea>
                     <button type="submit" class="btn">SUBMIT INQUIRY</button>
                 </form>
             </div>
@@ -246,8 +236,8 @@
     <button id="backToTop" onclick="window.scrollTo(0,0)"><i class="fas fa-arrow-up"></i></button>
 
     <footer>
-        <p>&copy; 2025 Kolinji Technologies. All rights reserved.</p>
-        <p>Specialists in Telecom-grade Software & 5G Performance Management.</p>
+        <p>&copy; 2025 Kolinji Technologies. All rights reserved. [cite: 1]</p>
+        <p>Providing expert solutions in Telecom Systems and AI Transformation[cite: 6, 7].</p>
     </footer>
 
     <script>
