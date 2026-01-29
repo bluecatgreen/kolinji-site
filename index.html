@@ -39,7 +39,26 @@
             border-bottom: 1px solid var(--secondary);
         }
 
-        .logo { font-size: 1.2rem; font-weight: bold; color: var(--accent); text-decoration: none; margin-bottom: 0.5rem; }
+      /*  .logo { font-size: 1.2rem; font-weight: bold; color: var(--accent); text-decoration: none; margin-bottom: 0.5rem; } */
+        .logo {
+                display: flex;
+                align-items: center;
+                gap: 12px; /* Space between logo and text */
+        }
+
+        /* Constrain the size of the logo image */
+        .logo img {
+            height: 40px; /* Adjust height as needed */
+            width: auto;
+            display: block;
+        }
+
+        /* Ensure the text still looks good next to the image */
+        logo span {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
         .nav-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
         .nav-links a { color: var(--text-light); text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
 
