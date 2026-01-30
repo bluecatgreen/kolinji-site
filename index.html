@@ -123,6 +123,55 @@
             .hero h1 { font-size: 3.5rem; }
             .grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
         }
+        /* Accordion Specific Styles */
+.accordion {
+    list-style: none;
+    padding: 0 !important;
+}
+
+.accordion li {
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+    margin-bottom: 0.5rem;
+}
+
+.accordion-header {
+    cursor: pointer;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-light);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.accordion-header:hover {
+    color: var(--accent);
+}
+
+.accordion-header i {
+    font-size: 0.8rem !important;
+    margin-bottom: 0 !important;
+    transition: transform 0.3s;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* Active State */
+.accordion li.active .accordion-content {
+    max-height: 200px; /* Adjust based on content amount */
+    padding-bottom: 10px;
+}
+
+.accordion li.active .accordion-header i {
+    transform: rotate(180deg);
+}
     </style>
 </head>
 <body>
@@ -171,11 +220,31 @@
                 <div class="card">
                     <i class="fas fa-brain"></i>
                     <h3>Artificial Intelligence</h3>
-                    <ul>
-                        <li>Intelligent automation using AI agents and workflow orchestration</li>
-                        <li>Chatbots and virtual assistants for customer support and operations</li>
-                        <li>Knowledge bases and document search integration</li>                        
-                        <li>Custom model design for use cases (churn,fraud)</li>
+                    <ul class="accordion">                  
+                        <li>
+                           <div class="accordion-header">Intelligent automation<i class="fas fa-chevron-down"></i></div>
+                           <div class="accordion-content">
+                              <p>Intelligent automation using AI agents and workflow orchestration</p>
+                           </div>
+                        </li>
+                        <li>
+                          <div class="accordion-header">Chatbots & Virtual Assistants <i class="fas fa-chevron-down"></i></div>
+                          <div class="accordion-content">
+                             <p>Chatbots and virtual assistants for customer support and operations</p>
+                          </div>
+                       </li>
+                       <li>
+                         <div class="accordion-header">RAG Integration<i class="fas fa-chevron-down"></i></div>
+                         <div class="accordion-content">
+                              <p>Knowledge bases and document search integration</p>
+                         </div>
+                       </li>
+                       <li>
+                         <div class="accordion-header">Custom model<i class="fas fa-chevron-down"></i></div>
+                         <div class="accordion-content">
+                             <p>Custom model design for use cases (churn,fraud)</p>
+                         </div>
+                      </li>
                     </ul>
                 </div>
                 <div class="card">
@@ -297,6 +366,24 @@
                 btn.style.display = "none";
             }
         };
+//
+    document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const parent = header.parentElement;
+
+        // Toggle the active class
+        parent.classList.toggle('active');
+
+        // Optional: Close other items in the same list (Solo Accordion mode)
+        const siblings = parent.parentElement.querySelectorAll('li');
+        siblings.forEach(sibling => {
+            if (sibling !== parent) {
+                sibling.classList.remove('active');
+            }
+            });
+        });
+    });
+//
     </script>
 </body>
 </html>
