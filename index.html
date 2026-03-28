@@ -40,7 +40,6 @@
             border-bottom: 1px solid var(--secondary);
         }
 
-      /*  .logo { font-size: 1.2rem; font-weight: bold; color: var(--accent); text-decoration: none; margin-bottom: 0.5rem; } */
         .logo {
                 font-size: 1.2rem;  
                 font-weight: bold; 
@@ -49,22 +48,15 @@
                 margin-bottom: 0.5rem;
                 display: flex;
                 align-items: center;
-                gap: 12px; /* Space between logo and text */
+                gap: 12px;
         }
 
-        /* Constrain the size of the logo image */
         .logo img {
-            height: 120px; /* Adjust height as needed */
+            height: 120px;
             width: auto;
             display: block;
         }
 
-        /* Ensure the text still looks good next to the image */
-        logo span {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: var(--accent);
-        }
         .nav-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
         .nav-links a { color: var(--text-light); text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
 
@@ -99,15 +91,13 @@
         .mission-vision-box { background: rgba(100, 255, 218, 0.05); padding: 2rem; border-radius: 8px; margin-bottom: 4rem; border-left: 4px solid var(--accent); }
         .mission-vision-box h3 { color: var(--accent); margin-top: 0; }
 
-        .about-box { background: rgba(100, 255, 218, 0.05); padding: 2rem; border-radius: 8px; margin-bottom: 4rem; }
-        
         table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: var(--secondary); }
         th, td { text-align: left; padding: 15px; border: 1px solid var(--primary); }
         th { background: rgba(100, 255, 218, 0.1); color: var(--accent); }
 
         .contact-form { background: var(--secondary); padding: 2rem; border-radius: 8px; margin-top: 3rem; }
         input, select, textarea { width: 100%; padding: 15px; background: var(--primary); border: 1px solid var(--text-gray); color: var(--white); margin-bottom: 1rem; border-radius: 4px; font-size: 16px; }
-        .btn { background: var(--accent); color: var(--primary); border: none; padding: 1rem; font-weight: bold; cursor: pointer; width: 100%; border-radius: 4px; font-size: 1rem; transition: 0.3s; }
+        .btn { background: var(--accent); color: var(--primary); border: none; padding: 1rem; font-weight: bold; cursor: pointer; width: 100%; border-radius: 4px; font-size: 1rem; transition: 0.3s; text-decoration: none; display: inline-block; text-align: center; }
         .btn:hover { background: var(--white); }
 
         .location-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; text-align: center; margin-top: 1rem; }
@@ -123,55 +113,15 @@
             .hero h1 { font-size: 3.5rem; }
             .grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
         }
-        /* Accordion Specific Styles */
-.accordion {
-    list-style: none;
-    padding: 0 !important;
-}
 
-.accordion li {
-    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
-    margin-bottom: 0.5rem;
-}
-
-.accordion-header {
-    cursor: pointer;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--text-light);
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.accordion-header:hover {
-    color: var(--accent);
-}
-
-.accordion-header i {
-    font-size: 0.8rem !important;
-    margin-bottom: 0 !important;
-    transition: transform 0.3s;
-}
-
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    color: var(--text-gray);
-    font-size: 0.9rem;
-}
-
-/* Active State */
-.accordion li.active .accordion-content {
-    max-height: 200px; /* Adjust based on content amount */
-    padding-bottom: 10px;
-}
-
-.accordion li.active .accordion-header i {
-    transform: rotate(180deg);
-}
+        .accordion { list-style: none; padding: 0 !important; }
+        .accordion li { border-bottom: 1px solid rgba(100, 255, 218, 0.1); margin-bottom: 0.5rem; }
+        .accordion-header { cursor: pointer; padding: 10px 0; display: flex; justify-content: space-between; align-items: center; color: var(--text-light); font-weight: 500; transition: color 0.3s; }
+        .accordion-header:hover { color: var(--accent); }
+        .accordion-header i { font-size: 0.8rem !important; margin-bottom: 0 !important; transition: transform 0.3s; }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; color: var(--text-gray); font-size: 0.9rem; }
+        .accordion li.active .accordion-content { max-height: 300px; padding-bottom: 10px; }
+        .accordion li.active .accordion-header i { transform: rotate(180deg); }
     </style>
 </head>
 <body>
@@ -184,6 +134,7 @@
         <div class="nav-links">
             <a href="#about">Mission</a>
             <a href="#ai">AI Services</a>
+            <a href="#showcase">Showcase</a>
             <a href="#core">IT Solutions</a>
             <a href="#training">Training</a>
             <a href="#contact">Contact</a>
@@ -205,7 +156,7 @@
         
         <section class="mission-vision-box">
             <h3>Mission & Vision</h3>
-            <p>Our mission is to provide IT consulting solutions and services that improve profitability, efficiency, and scalability.We believe technology is a business enabler, not a panacea, and we avoid overselling or hyping technology.</p>
+            <p>Our mission is to provide IT consulting solutions and services that improve profitability, efficiency, and scalability. We believe technology is a business enabler, not a panacea, and we avoid overselling or hyping technology.</p>
             <p>Our commitment to you:</p>
             <ul>
                 <li><strong>Transparency:</strong> Openness is our motto; we provide candid points of view on all technology trends.</li>
@@ -225,38 +176,47 @@
                            <div class="accordion-header">Intelligent automation<i class="fas fa-chevron-down"></i></div>
                            <div class="accordion-content">
                               <b>Decreased OpEx via autonomous task execution</b>
-                              <p>Using AI Agents, we can define business objectives, reason through steps, and execute tasks across different software tools (e.g., an agent that identifies a billing discrepancy, emails the vendor, and updates the ERP automatically).
-                                It allows your organization's resources to focus on high value strategic initiatives instead of "busy work".
-                              </p>
+                              <p>Using AI Agents, we can define business objectives, reason through steps, and execute tasks across different software tools (e.g., an agent that identifies a billing discrepancy, emails the vendor, and updates the ERP automatically).</p>
                            </div>
                         </li>
                         <li>
                           <div class="accordion-header">Chatbots & Virtual Assistants <i class="fas fa-chevron-down"></i></div>
                           <div class="accordion-content">
                           <b>Brand Loyalty, Satisfied Customers</b>
-                             <p>
-                                 Using empathetic, context-aware digital representatives that helps your stakeholders like your customers in a consistient manner. 
-                                 They provide high-quality round the clock support that feels human, and reduces friction with your customers and partners.
-                             </p>
+                             <p>Using empathetic, context-aware digital representatives that helps your stakeholders like your customers in a consistent manner.</p>
                           </div>
                        </li>
                        <li>
                          <div class="accordion-header">Enterprise knowledge Integration<i class="fas fa-chevron-down"></i></div>
                          <div class="accordion-content">
                             <b>Integration of proprietary knowledge, internal rules and processes</b>
-                              <p>Grounding <b>AI</b> with your organization's actual data. 
-                                Helps finding precise answers hidden in thousands of pages of documentation, drastically reducing time-to-information and while ensuring data remains private and secure. </p>
+                              <p>Grounding <b>AI</b> with your organization's actual data. Helps finding precise answers hidden in thousands of pages of documentation.</p>
                          </div>
                        </li>
-                       <li>
-                         <div class="accordion-header">Custom model<i class="fas fa-chevron-down"></i></div>
-                         <div class="accordion-content">
-                        <b>Data driven internal awareness and decision making</b>
-                             <p>Building or fine-tuning specialized models designed for specific data patterns, such as time-series forecasting or behavioral analysis.</p>
-                         </div>
-                      </li>
                     </ul>
                 </div>
+
+                <div class="card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Modern Full-Stack Apps</h3>
+                    <ul class="accordion">
+                        <li>
+                            <div class="accordion-header">Edge-Ready Architectures<i class="fas fa-chevron-down"></i></div>
+                            <div class="accordion-content">
+                                <b>High Performance with Vercel & Turso</b>
+                                <p>Developing lightning-fast applications using SvelteKit and LibSQL (Turso) for global latency-free data access. Perfect for real-time social and collaborative tools.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion-header">Secure Identity Management<i class="fas fa-chevron-down"></i></div>
+                            <div class="accordion-content">
+                                <b>Robust Authentication</b>
+                                <p>Implementing enterprise-grade security with Better-Auth, ensuring your user data and sessions are protected with the latest industry standards.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
                 <div class="card">
                     <i class="fas fa-layer-group"></i>
                     <h3>Infrastructure & Design</h3>
@@ -265,46 +225,36 @@
                            <div class="accordion-header">API Design<i class="fas fa-chevron-down"></i></div>
                            <div class="accordion-content">
                             <b>Building Agility into IT Systems</b>
-                            <p>Robust API Design helps organization have an highly interoperable and growth ecosystem. Enables multiple channels of interactions with your stakeholders like partners, customers and suppliers.
-                                They allow you to swap out vendors or add new features without rebuilding the entire foundation, significantly reducing long-term development costs.
-                              </p>
+                            <p>Robust API Design helps organization have an highly interoperable and growth ecosystem. Enables multiple channels of interactions with partners and suppliers.</p>
                            </div>
                         </li>
                         <li>
                            <div class="accordion-header">Data Layer solutions<i class="fas fa-chevron-down"></i></div>
                            <div class="accordion-content">
                                <b>Accurate and Reliable Business Intelligence</b>
-                              <p>Analysing current data architecture and providing future-proof solutions for storing, performance, scalability, security,integrity and governance. 
-                              </p>
+                              <p>Analysing current data architecture and providing future-proof solutions for performance, scalability, and integrity.</p>
                            </div>
                         </li>
                         <li>
-                           <div class="accordion-header">Infrastructure enhancements<i class="fas fa-chevron-down"></i></div>
+                           <div class="accordion-header">Monitoring and Observability<i class="fas fa-chevron-down"></i></div>
                            <div class="accordion-content">
-                              <b>Building Scalablity and Cost Effective systems</b>
-                              <p>Providing assessement, solutions and strategies for organization to reduce technical debt, modernized IT software and infrastructure thereby improving maintainablity and 
-                                  reducing operational overhead. 
-                              </p>
+                              <b>Proactive Issue Identification</b>
+                              <p>Enables organizations to proactively manage IT Systems, ensuring bottlenecks are identified before impacting customers.</p>
                            </div>
                         </li>
-                        <li>
-                           <div class="accordion-header">Monitoring and Observability Enablement<i class="fas fa-chevron-down"></i></div>
-                           <div class="accordion-content">
-                              <b>Proactive Issue Identification & Resolution</b>
-                              <p>Enables organizations to proactively manage their IT Systems, with instrumentation tools and capabilities, ensuring that bottlenecks are identified and addressed before inpacting your business and customers.
-                              </p>
-                           </div>
-                        </li>
-                        <li>
-                           <div class="accordion-header">Disaster Recovery and Business Continuity<i class="fas fa-chevron-down"></i></div>
-                           <div class="accordion-content">
-                              <b>Protecting Systems for data loss and downtime</b> 
-                              <p> Ensuring your IT systems are resiliency and functional and protected from systemic and non-systemic incidents, and are highly available with minimum data loss. 
-                              </p>
-                           </div>
-                        </li>
-
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="showcase" style="margin-top: 4rem;">
+            <h2 class="section-title">Product Showcase</h2>
+            <div class="mission-vision-box" style="border-left-color: var(--white);">
+                <h3>Trust @ KolinjiTech</h3>
+                <p>Explore our latest social platform built with <strong>Svelte, Claude-optimized code, and Turso</strong>. This application demonstrates our ability to rapidly deploy secure, scalable, and user-centric solutions on the Vercel platform.</p>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                    <a href="https://www.trust.kolinjitech.in" target="_blank" class="btn" style="padding: 0.8rem 2rem;">Launch Application</a>
+                    <a href="https://www.trust.kolinjitech.in/about" target="_blank" class="btn" style="padding: 0.8rem 2rem; background: transparent; border: 1px solid var(--accent); color: var(--accent);">About the Project</a>
                 </div>
             </div>
         </section>
@@ -324,8 +274,12 @@
                         <td>Transforming legacy systems into modern, efficient, and compliant architectures.</td>
                     </tr>
                     <tr>
-                        <td>Scalability</td>
-                        <td>Augmenting existing systems to ensure scalable performance.</td>
+                        <td>Cloud-Native Apps</td>
+                        <td>Specialized in **SvelteKit, Turso, and Vercel** for high-scale enterprise social applications.</td>
+                    </tr>
+                    <tr>
+                        <td>Secure Integration</td>
+                        <td>Implementing **Better-Auth** and AI-driven guardrails for modern identity management.</td>
                     </tr>
                     <tr>
                         <td>Telecom Specialized</td>
@@ -344,7 +298,7 @@
                     <ul>
                         <li>Telecom OSS</li>
                         <li>Operationalizing GenAI, Agentic AI, and Guardrails</li>
-                        <li>Network Technologies (5G, 4G, MPLS, SD-WAN, Datacenter Interconnect)</li>
+                        <li>Network Technologies (5G, 4G, MPLS, SD-WAN)</li>
                         <li>Network Performance Management</li>
                     </ul>
                 </div>
@@ -365,7 +319,7 @@
             <div class="location-grid">
                 <div class="location-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <p>Chennai, Tamil Nadu,India</p>
+                    <p>Chennai, Tamil Nadu, India</p>
                 </div>
                 <div class="location-item">
                     <i class="fas fa-map-marker-alt"></i>
@@ -383,16 +337,15 @@
                     <select name="aos" required>
                         <option value="" disabled selected>Primary Area of Interest</option>
                         <option>Artificial Intelligence</option>
+                        <option>Full-Stack App Development</option>
                         <option>System Modernization & Scalability</option>
                         <option>Training & Social Responsibility</option>
                         <option>Infrastructure & Compliance</option>
                         <option>Others</option>
-
                     </select>
                     <textarea name="minfo" placeholder="How can we help modernize your environment?" rows="5" required></textarea>
-                    <button type="submit" class="btn">SUBMIT INQUIRY</button>
+                    <button type="submit" class="btn" style="width: 100%;">SUBMIT INQUIRY</button>
                 </form>
-
             </div>
         </section>
 
@@ -414,24 +367,19 @@
                 btn.style.display = "none";
             }
         };
-//
-    document.querySelectorAll('.accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-        const parent = header.parentElement;
 
-        // Toggle the active class
-        parent.classList.toggle('active');
-
-        // Optional: Close other items in the same list (Solo Accordion mode)
-        const siblings = parent.parentElement.querySelectorAll('li');
-        siblings.forEach(sibling => {
-            if (sibling !== parent) {
-                sibling.classList.remove('active');
-            }
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const parent = header.parentElement;
+                parent.classList.toggle('active');
+                const siblings = parent.parentElement.querySelectorAll('li');
+                siblings.forEach(sibling => {
+                    if (sibling !== parent) {
+                        sibling.classList.remove('active');
+                    }
+                });
             });
         });
-    });
-//
     </script>
 </body>
 </html>
